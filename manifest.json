@@ -1,5 +1,5 @@
 {
-    "display_name": "Random Character Generator",
+    "display_name": "캐릭터 생성",
     "loading_order": 100,
     "requires": [],
     "optional": [],
