@@ -757,10 +757,6 @@ function addSettingsPanel() {
             </div>
             <div class="inline-drawer-content">
                 <div style="padding: 8px 0;">
-                    <p style="font-size: 12px; opacity: 0.7; margin-bottom: 10px;">
-                        캐릭터 목록의 🎲 카드를 클릭하거나 아래 버튼으로 생성하세요.
-                    </p>
-
                     <!-- Connection Profile -->
                     <div class="rcg_section" style="margin-bottom: 10px;">
                         <label style="font-size: 12px; margin-bottom: 4px;">🔌 연결 프로필</label>
@@ -769,39 +765,6 @@ function addSettingsPanel() {
                         </select>
                         <small style="font-size: 10px; opacity: 0.5;">별도 프로필 선택 시 메인 채팅과 독립적으로 생성</small>
                     </div>
-
-                    <!-- Language -->
-                    <div class="rcg_section" style="margin-bottom: 10px;">
-                        <label style="font-size: 12px; margin-bottom: 4px;">기본 생성 언어</label>
-                        <select id="rcg_settings_language" class="text_pole">
-                            <option value="ko" ${s.language === 'ko' ? 'selected' : ''}>한국어</option>
-                            <option value="en" ${s.language === 'en' ? 'selected' : ''}>English</option>
-                            <option value="ja" ${s.language === 'ja' ? 'selected' : ''}>日本語</option>
-                        </select>
-                    </div>
-
-                    <!-- User Persona -->
-                    <div class="rcg_section" style="margin-bottom: 10px;">
-                        <label style="font-size: 12px; margin-bottom: 4px;">👤 유저 페르소나</label>
-                        <textarea id="rcg_settings_persona" class="text_pole" rows="3"
-                            placeholder="예: 20대 여성, 대학생, 내성적, 검은 장발..."
-                            style="resize: vertical; font-size: 12px;">${escapeHtml(s.user_persona)}</textarea>
-                        <small style="font-size: 10px; opacity: 0.5;">캐릭터 생성 시 {{user}} 설정에 반영됩니다</small>
-                    </div>
-
-                    <!-- Open button -->
-                    <button id="rcg_open_popup_btn" class="menu_button" style="width: 100%; margin-bottom: 12px;">
-                        🎲 캐릭터 생성 열기
-                    </button>
-
-                    <hr style="border-color: var(--SmartThemeBorderColor, #444); margin: 8px 0;" />
-
-                    <!-- Character list -->
-                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
-                        <label style="font-size: 12px; font-weight: 600;">생성된 캐릭터 목록</label>
-                        <span id="rcg_list_count" style="font-size: 11px; opacity: 0.6;">0개</span>
-                    </div>
-                    <div id="rcg_char_list" class="rcg_char_list"></div>
                 </div>
             </div>
         </div>
@@ -809,26 +772,6 @@ function addSettingsPanel() {
 
     $('#extensions_settings2').append(settingsHTML);
 
-    // Profile
-    $('#rcg_settings_profile').on('change', function () {
-        getSettings().profile_id = $(this).val();
-        saveSettingsDebounced();
-    });
-
-    // Language
-    $('#rcg_settings_language').on('change', function () {
-        getSettings().language = $(this).val();
-        saveSettingsDebounced();
-    });
-
-    // Persona
-    $('#rcg_settings_persona').on('input', function () {
-        getSettings().user_persona = $(this).val();
-        saveSettingsDebounced();
-    });
-
-    // Open popup
-    $('#rcg_open_popup_btn').on('click', openPopup);
 
     refreshSettingsList();
 }
