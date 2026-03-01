@@ -436,7 +436,7 @@
     transition: all 0.2s;
 }
 
-.rcg_btn_chat { background: var(--SmartThemeQuoteColor, #f0a040); color: #000; }
+.rcg_btn_chat { background: var(--SmartThemeQuoteColor, #f0a040); color: #fff; }
 .rcg_btn_chat:hover:not(:disabled) { filter: brightness(1.1); }
 
 .rcg_btn_regen {
