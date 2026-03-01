@@ -132,11 +132,11 @@ function getPopupHTML() {
                 <div id="rcg_canon_fields">
                     <div class="rcg_section">
                         <label>원작 / 작품명</label>
-                        <input type="text" id="rcg_source" placeholder="예: Jujutsu Kaisen, Arcane, 귀멸의 칼날..." />
+                        <input type="text" id="rcg_source" placeholder="예: 마블, 해리포터..." />
                     </div>
                     <div class="rcg_section">
                         <label>캐릭터 이름</label>
-                        <input type="text" id="rcg_canon_name" placeholder="예: Gojo Satoru, Jinx..." />
+                        <input type="text" id="rcg_canon_name" placeholder="예: 스파이더맨, 말포이..." />
                     </div>
                     <div class="rcg_section">
                         <label>{{user}}와의 관계</label>
@@ -152,7 +152,7 @@ function getPopupHTML() {
                 <div id="rcg_original_fields" style="display:none;">
                     <div class="rcg_section">
                         <label>캐릭터 이름</label>
-                        <input type="text" id="rcg_orig_name" placeholder="예: Kai, 서하윤, Baron..." />
+                        <input type="text" id="rcg_orig_name" placeholder="" />
                     </div>
                     <div class="rcg_row">
                         <div class="rcg_section">
