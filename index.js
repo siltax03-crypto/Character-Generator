@@ -93,7 +93,7 @@ function injectRandomCard() {
         <div id="random_char_card_entry" class="random_char_card" title="랜덤 캐릭터 생성">
             <div class="random_char_card_icon">🎲</div>
             <div class="random_char_card_text">
-                <span class="name">Random Character</span>
+                <span class="name">캐릭터 생성</span>
                 <span class="desc">클릭하여 캐릭터 생성</span>
             </div>
         </div>
@@ -117,7 +117,7 @@ function getPopupHTML() {
     <div class="rcg_overlay" id="rcg_overlay">
         <div class="rcg_popup">
             <div class="rcg_popup_header">
-                <h3>🎲 Random Character Generator</h3>
+                <h3>🎲 캐릭터 생성</h3>
                 <button class="rcg_close_btn" id="rcg_close">✕</button>
             </div>
 
@@ -752,7 +752,7 @@ function addSettingsPanel() {
     <div id="rcg_settings" class="extension_settings">
         <div class="inline-drawer">
             <div class="inline-drawer-toggle inline-drawer-header">
-                <b>🎲 Random Character Generator</b>
+                <b>🎲 캐릭터 생성 설정</b>
                 <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
             </div>
             <div class="inline-drawer-content">
